@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.5.6</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+    <groupId>${groupId}</groupId>
+	<artifactId>${artifactId}</artifactId>
+    <version>${version}</version>
+	<packaging>pom</packaging>
+	<name>${artifactId}</name>
+
+	<properties>
+		<java.version>8</java.version>
+		<!-- versions  -->
+		<mybatis-plus.version>3.4.2</mybatis-plus.version>
+		<lombok.version>1.18.20</lombok.version>
+	</properties>
+
+    <modules>
+        <module>api</module>
+        <module>app-server</module>
+        <module>core</module>
+        <module>dao</module>
+        <module>infra</module>
+        <module>test</module>
+    </modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Module Dependencies   -->
+			<dependency>
+				<groupId>${groupId}</groupId>
+				<artifactId>api</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${groupId}</groupId>
+				<artifactId>core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${groupId}</groupId>
+				<artifactId>dao</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${groupId}</groupId>
+				<artifactId>infra</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<!--  Tools Dependencies  -->
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>${mybatis-plus.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+				<optional>true</optional>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>

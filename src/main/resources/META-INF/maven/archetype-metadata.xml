@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor>
+
+    <resources>
+        <resource encoding="UTF-8">README.md</resource>
+        <resource encoding="UTF-8">.gitignore</resource>
+    </resources>
+
+    <fileSets>
+        <fileSet  filtered="true" encoding="UTF-8" packaged="false">
+            <directory></directory>
+            <includes>
+                <include>README.md</include>
+                <include>.gitignore</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+
+    <modules>
+        <module id="api" name="api" dir="api">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="app-server" name="app-server" dir="app-server">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="core" name="core" dir="core">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="dao" name="dao" dir="dao">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="infra" name="infra" dir="infra">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="test" name="test" dir="test">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/test/java</directory>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/test/resources</directory>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+    </modules>
+</archetype-descriptor>
